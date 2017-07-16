@@ -1,19 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (c) 2017 Thor Mortensen
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* 
- * File:   pumiceConsoleMenu.h
+/* File:   pumiceConsoleMenu.h
  * Author: Thor Mortensen 
  *
  * Created on July 16, 2017, 5:01 PM
  */
 
 /**
+ * Thise files makes it esy to generate a guick and durty terminal menu system.
+ * The menu us navigatable with the single key presses.
+ * The menu consists of two types of menus: simple menus (MENU) or actions menus
+ * (ACTION_MENU).
+ * A simple menu is used for navigation. A menu has up to 32 child menus 
+ * whitch can be eiather simple menus or arction menus.
+ * An action menu is the endpoint of a menu path. It consist of action items
+ * which are interactioneble items. 
+ * 
  * Usage:
- * Generate a menu with the 
+ * 
+ * Use this syntax to make a simple menu:
+ * 
+  #define <MENU_NAME>(MENU_ITEM)\
+    MENU_ITEM(<menu item>)\
+    MENU_ITEM(APS_VPC)\
+    MENU_ITEM(BP_Heater)\
+    MENU_ITEM(CMM_Heater)\
+    MENU_ITEM(MAN_Mode)\
+    MENU_ITEM(Control)\
+
+    GENERATE_MENU(main, MAIN_MENU);
  * 
  * 
  * you must use the LINK_MENU(SET_LINK) macro to to link the menu together 
@@ -50,7 +80,6 @@ enum interactionPos_e {
     NEUTRAL,
     POS_UP,
     POS_DPOWN,
-    ENTER
 };
 
 typedef enum interaction_e {

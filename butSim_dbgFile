@@ -1,0 +1,6 @@
+Before:
+Reg L -> 0x00000000
+Reg H -> 0x000000c0
+After:
+Reg L -> 0x00000000
+Reg H -> 0x00000000
