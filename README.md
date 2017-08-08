@@ -71,11 +71,10 @@ To make a action menu use the ```GENERATE_ACTION_MENU``` macro with the followin
 
 GENERATE_ACTION_MENU(<menu name>, <MENU NAME>, <action type>, <callback>);
 ```
-Where the \<menu name\> will be the name of that menu and by extension the name of the declared
-```menu
-Item_t``` variable and its string/enum companions. The \<MENU NAME\> is the exact name of the macro
-you just defined. \<action type\> is a set of predefined action types such as
-button, switch or number. \<callback\> is the the function that is going to be called when 
+Where the <menu name> will be the name of that menu and by extension the name of the declared
+```menuItem_t``` variable and its string/enum companions. The <MENU NAME> is the exact name of the macro
+you just defined. <action type> is a set of predefined action types such as
+button, switch or number. <callback> is the the function that is going to be called when 
 the user interact with any of the action items in that menu. It has the following prototype: 
 ```void <interaction funktion name>(uint8_t index, uint8_t action, int value);```
 Where the index is the index of the item that called the callback function.
