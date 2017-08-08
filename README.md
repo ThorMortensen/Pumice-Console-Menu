@@ -20,7 +20,7 @@ To sum it up; menus and submenus navigate to the action items the user interacts
         |
         v
  +-------------+
- | Simpel menu |->-->-+
+ | Simple menu |->-->-+
  +-------------+      |
                       |
                  +-------------+
